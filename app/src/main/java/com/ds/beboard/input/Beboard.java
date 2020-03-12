@@ -10,6 +10,7 @@ import hani.momanii.supernova_emoji_library.emoji.Emojicon;
 import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
@@ -38,7 +39,9 @@ import android.view.textservice.SuggestionsInfo;
 import android.view.textservice.TextServicesManager;
 import android.widget.PopupWindow;
 
+import com.ds.beboard.MainActivity;
 import com.ds.beboard.R;
+import com.ds.beboard.SettingActivity;
 
 import java.util.List;
 
@@ -81,8 +84,8 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
             R.layout.keyboardview8, R.layout.keyboardview9, R.layout.keyboardview10, R.layout.keyboardview11, R.layout.keyboardview12};
 
     /**
-     * Main initialization of the input method component.  Be sure to call
-     * to super class.
+     * Initialisation principale du composant de méthode d'entrée. Assurez-vous d'appeler
+     * en super classe.
      */
     @Override public void onCreate() {
         super.onCreate();
@@ -94,14 +97,17 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
     }
 
     /**
-     * This is the point where you can do all of your UI initialization.  It
-     * is called after creation and any configuration change.
+     *C'est le point où vous pouvez effectuer toute l'initialisation de votre interface utilisateur. Il
+     * est appelé après la création et tout changement de configuration.
      */
     @Override public void onInitializeInterface() {
         if (mQwertyKeyboard != null) {
-            // Configuration changes can happen after the keyboard gets recreated,
-            // so we need to be able to re-build the keyboards if the available
-            // space has changed.
+
+            /** Des changements de configuration peuvent se produire après la recréation du clavier,
+             nous devons donc être en mesure de reconstruire les claviers si disponible
+             l'espace a changé
+             */
+
             int displayWidth = getMaxWidth();
             if (displayWidth == mLastDisplayWidth) return;
             mLastDisplayWidth = displayWidth;
@@ -114,10 +120,10 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
     }
 
     /**
-     * Called by the framework when your view for creating input needs to
-     * be generated.  This will be called the first time your input method
-     * is displayed, and every time it needs to be re-created such as due to
-     * a configuration change.*/
+     * Appelé par le framework lorsque votre vue pour créer une entrée doit
+     * être généré. Ce sera appelé la première fois que votre méthode de saisie
+     * est affiché, et chaque fois qu'il doit être recréé, par exemple en raison de
+     * un changement de configuration.*/
 
     @Override
     public View onCreateInputView() {
@@ -136,8 +142,8 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
     }
 
     /**
-     * Called by the framework when your view for showing candidates needs to
-     * be generated, like {@link #onCreateInputView}.
+     *Appelé par le cadre lorsque votre vue pour montrer les candidats doit
+     * être généré, comme {@link #onCreateInputView}.
      */
     @Override public View onCreateCandidatesView() {
         mCandidateView = new CandidateView(this);
@@ -253,10 +259,10 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
 
 
     /**
-     * This is the main point where we do our initialization of the input method
-     * to begin operating on an application.  At this point we have been
-     * bound to the client, and are now receiving all of the detailed information
-     * about the target of our edits.
+     *Ceci est le point principal où nous faisons notre initialisation de la méthode d'entrée
+     * pour commencer à fonctionner sur une application. À ce stade, nous avons été
+     * lié au client, et reçoit maintenant toutes les informations détaillées
+     * sur la cible de nos modifications.
      */
 
 
@@ -348,11 +354,9 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
                 setLatinKeyboard(mSymbolsKeyboard);
                 mSymbolsKeyboard.setShifted(false);
             }
-        } else if (primaryCode == 122) {
-            contextualKey();
         } else if (primaryCode == -10000) {
             // Show Emoticons
-            setLatinKeyboard(mEmoji);
+            startActivity(new Intent(Beboard.this, SettingActivity.class));
             //showEmoticons();
         } else if (primaryCode == -10001) {
             // Zero Space
@@ -380,26 +384,7 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
     }
 
 
-    public void contextualKey (){
-        LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-        if (layoutInflater != null){
-            ViewGroup container = (ViewGroup)layoutInflater.inflate(R.layout.keyboard_popup_layout, null);
 
-            popupWindow = new PopupWindow(container,200,200,true);
-
-            popupWindow .showAtLocation(mInputView, Gravity.NO_GRAVITY,0,100);
-
-            container.setOnTouchListener(new  View.OnTouchListener(){
-
-                @Override
-                public boolean onTouch(View view, MotionEvent motionEvent) {
-                    popupWindow.dismiss();
-                    return true;
-                }
-            });
-
-        }
-    }
 
 
     /**

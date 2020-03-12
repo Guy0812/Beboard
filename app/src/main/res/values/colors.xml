@@ -13,6 +13,7 @@
     <color name="candidate_recommended">#e35900</color>
     <color name="candidate_other">#ff808080</color>
     <color name="candidate_background">#bbffffff</color>
+    <color name="bleu">#4285f4</color>
 
     <!-- Default theme colors -->
     <color name="keyboardBackgroundColor">#eaeded</color>

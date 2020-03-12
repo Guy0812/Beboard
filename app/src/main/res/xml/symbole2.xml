@@ -25,7 +25,7 @@
         <Key android:codes="169" android:keyLabel="©" android:keyEdgeFlags="left"/>
         <Key android:codes="163" android:keyLabel="£"/>
         <Key android:codes="8364" android:keyLabel="€"/>
-        <Key android:codes="94" android:keyLabel="^"/>
+        <Key android:codes="92" android:keyLabel="\\" />
         <Key android:codes="174" android:keyLabel="®"/>
         <Key android:codes="165" android:keyLabel="¥"/>
         <Key android:codes="95" android:keyLabel="_"/>
@@ -35,23 +35,25 @@
     </Row>
 
     <Row>
-        <Key android:codes="8230" android:keyLabel="…" android:keyWidth="15%p" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left"/>
+        <Key android:codes="8230" android:keyLabel="…"  android:keyEdgeFlags="left"/>
         <Key android:codes="161" android:keyLabel="¡" />
         <Key android:codes="60" android:keyLabel="&lt;"/>
         <Key android:codes="62" android:keyLabel="&gt;"/>
         <Key android:codes="162" android:keyLabel="¢"/>
         <Key android:codes="124" android:keyLabel="|"/>
-        <Key android:codes="92" android:keyLabel="\\" />
-        <Key android:codes="191" android:keyLabel="¿"/>
-        <Key android:codes="-5" android:keyIcon="@drawable/ic_keyboard_backspace_black_24dp" android:keyWidth="15%p" android:keyEdgeFlags="right" android:isRepeatable="true"/>
+        <Key android:codes="94" android:keyLabel="^"/>
+        <Key android:codes="176" android:keyLabel="°"/>
+        <Key android:codes="37" android:keyLabel="%"/>
+        <Key android:codes="191" android:keyLabel="¿" android:keyEdgeFlags="right"/>
     </Row>
 
-    <Row android:rowEdgeFlags="bottom">
-        <Key android:codes="-2" android:keyLabel="ABC" android:keyWidth="15%p" android:keyEdgeFlags="left" />
-        <Key android:codes="46" android:keyLabel="." android:keyWidth="10%p" />
-        <Key android:codes="-101" android:keyIcon="@drawable/ic_arrow_upward_black_24dp" android:keyWidth="10%p" />
-        <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="30%p" android:isRepeatable="true"/>
-        <Key  android:codes="-1" android:keyLabel="/2" android:keyWidth="15%p" />
-        <Key android:codes="10" android:keyIcon="@drawable/ic_keyboard_return_black_24dp" android:keyWidth="20%p" android:keyEdgeFlags="right" />
+    <Row  android:rowEdgeFlags="bottom">
+
+        <Key android:codes="-2" android:keyLabel="ABC"    android:keyEdgeFlags="left" />
+        <Key android:keyWidth="10%p" android:codes="-10000" android:keyIcon="@drawable/ic_settings_black_24dp"/>
+        <Key android:codes="-101"  android:keyIcon="@drawable/ic_language_black_24dp" android:keyWidth="10%p" android:isRepeatable="true"/>
+        <Key android:codes="32" android:keyLabel="SPACE" android:keyWidth="40%p" android:isRepeatable="true"/>
+        <Key  android:codes="-1" android:keyLabel="1/2" android:keyWidth="15%p" />
+        <Key android:codes="10" android:keyIcon="@drawable/ic_keyboard_return_black_24dp"  android:keyWidth="20%p" android:keyEdgeFlags="right" />
     </Row>
 </Keyboard>

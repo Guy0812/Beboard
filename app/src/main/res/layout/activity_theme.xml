@@ -7,12 +7,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ds.beboard.ThemeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            android:text="Themes"
+            android:textSize="16sp"
+            ></TextView>
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="20dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" >
+
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
@@ -40,6 +65,7 @@
                         android:id="@+id/theme1_imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -52,24 +78,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme2" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
                     <ImageButton
                         android:id="@+id/theme3_imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -77,18 +97,6 @@
                         android:padding="0dp"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme3" />
-
-                    <ImageButton
-                        android:id="@+id/theme4_imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="true"
-                        android:padding="0dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/theme4" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -97,10 +105,24 @@
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
+
+                    <ImageButton
+                        android:id="@+id/theme4_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/theme4" />
                     <ImageButton
                         android:id="@+id/theme5_imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -114,6 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
@@ -121,6 +144,8 @@
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme6" />
                 </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -132,6 +157,7 @@
                         android:id="@+id/theme7_imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -145,23 +171,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme8" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
                     <ImageButton
                         android:id="@+id/theme9_imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -169,18 +190,6 @@
                         android:padding="0dp"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme9" />
-
-                    <ImageButton
-                        android:id="@+id/theme10_imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="true"
-                        android:padding="0dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/theme10" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -188,10 +197,25 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
+
+
+                    <ImageButton
+                        android:id="@+id/theme10_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/theme10" />
                     <ImageButton
                         android:id="@+id/theme11_imageButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
@@ -205,6 +229,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_weight="1"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
@@ -212,9 +237,12 @@
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme12" />
                 </LinearLayout>
+
+
             </LinearLayout>
         </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </RelativeLayout>

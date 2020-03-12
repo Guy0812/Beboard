@@ -28,6 +28,7 @@ import com.ds.beboard.R;
 import java.util.List;
 
 @TargetApi(Build.VERSION_CODES.CUPCAKE)
+
 public class LatinKeyboardView extends KeyboardView {
 
     private PopupWindow popup ;
@@ -85,29 +86,30 @@ public class LatinKeyboardView extends KeyboardView {
         List<Key> keys = getKeyboard().getKeys();
         for(Key key: keys) {
             if(key.label != null) {
-                if (key.label.equals("a")) {
+                if (key.label.equals("◌̀")) {
                     canvas.drawText("1", key.x + (key.width - 10), key.y + 30, paint);
-                } else if (key.label.equals("z")) {
+                } else if (key.label.equals("◌́")) {
                     canvas.drawText("2", key.x + (key.width - 10), key.y + 30, paint);
-                } else if (key.label.equals("e")) {
+                } else if (key.label.equals("◌̂")) {
                     canvas.drawText("3", key.x + (key.width - 10), key.y + 30, paint);
-                } else if (key.label.equals("r")) {
+                } else if (key.label.equals("◌̌")) {
                     canvas.drawText("4", key.x + (key.width - 10), key.y + 30, paint);
-                } else if (key.label.equals("ɛ")) {
+                } else if (key.label.equals("◌̄")) {
                     canvas.drawText("5", key.x + (key.width - 10), key.y + 30, paint);
-                }else if (key.label.equals("t")) {
+                }else if (key.label.equals("◌̱")) {
                     canvas.drawText("6", key.x + (key.width - 10), key.y + 30, paint);
-                }else if (key.label.equals("u")) {
+                }else if (key.label.equals("◌̃")) {
                     canvas.drawText("7", key.x + (key.width - 10), key.y + 30, paint);
-                }else if (key.label.equals("i")) {
+                }else if (key.label.equals("◌̰")) {
                     canvas.drawText("8", key.x + (key.width - 10), key.y + 30, paint);
-                }else if (key.label.equals("o")) {
+                }else if (key.label.equals("◌̇")) {
                     canvas.drawText("9", key.x + (key.width - 10), key.y + 30, paint);
-                }else if (key.label.equals("ɔ")) {
+                }else if (key.label.equals("◌̣")) {
                     canvas.drawText("0", key.x + (key.width - 10), key.y + 30, paint);
                 }
 
             }
+
 
         }
     }
