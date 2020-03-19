@@ -24,5 +24,6 @@
 
     <color name="white">#ffffff</color>
     <color name="candidateViewColor">#dbdada</color>
-
+    <color name="transp">#00FFFFFF</color>
+   <color name="grey"> #c3c3c3</color>
 </resources>

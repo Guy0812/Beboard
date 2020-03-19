@@ -81,7 +81,9 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
 
     int[] THE_LAYOUTS = {R.layout.keyboardview, R.layout.keyboardview2, R.layout.keyboardview3,
             R.layout.keyboardview4, R.layout.keyboardview5, R.layout.keyboardview6, R.layout.keyboardview7,
-            R.layout.keyboardview8, R.layout.keyboardview9, R.layout.keyboardview10, R.layout.keyboardview11, R.layout.keyboardview12};
+            R.layout.keyboardview8, R.layout.keyboardview9, R.layout.keyboardview10, R.layout.keyboardview11, R.layout.keyboardview12
+            , R.layout.keyboardview13, R.layout.keyboardview14, R.layout.keyboardview15, R.layout.keyboardview16, R.layout.keyboardview17
+            , R.layout.keyboardview18, R.layout.keyboardview19, R.layout.keyboardview20, R.layout.keyboardview21};
 
     /**
      * Initialisation principale du composant de méthode d'entrée. Assurez-vous d'appeler
@@ -115,7 +117,6 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
         mQwertyKeyboard = new LatinKeyboard(this, R.xml.fongbe);
         mSymbolsKeyboard = new LatinKeyboard(this, R.xml.symbole1);
         mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbole2);
-        mEmoji = new LatinKeyboard(this,R.xml.emo01);
         mcontext =new LatinKeyboard(this,R.xml.context1);
     }
 
@@ -128,7 +129,8 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
     @Override
     public View onCreateInputView() {
         // Set custom theme to input view.
-        mInputView = (LatinKeyboardView) getLayoutInflater().inflate(THE_LAYOUTS[sharedPreferences.getInt(THEME_KEY, 0)], null);
+        mInputView = (LatinKeyboardView) getLayoutInflater().inflate(
+                THE_LAYOUTS[sharedPreferences.getInt(THEME_KEY, 0)], null);
         mInputView.setOnKeyboardActionListener(this);
         setLatinKeyboard(mQwertyKeyboard);
         return mInputView;

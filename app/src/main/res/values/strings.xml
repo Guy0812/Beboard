@@ -20,4 +20,6 @@
     <string name="banner_unitID">ca-app-pub-6404264627814552/8236146819</string>
     <string name="interstitial_unitID">ca-app-pub-6404264627814552/5366440892</string>
 
+    <string name="about_info">Beboard is a complete solution for both Fongbé  Benin national language along with native numbers and symbols.\n\n The application is developed based on alphabet Fongbé, therefore we highly recommend to post your reviews to help us serve you best.\n\nSend us an email at beninkeyboard@gmail.com, if you have any concerns.</string>
+
 </resources>

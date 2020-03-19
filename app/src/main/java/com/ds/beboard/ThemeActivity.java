@@ -37,6 +37,15 @@ public class ThemeActivity extends AppCompatActivity implements View.OnClickList
         ImageButton themeButton11 = findViewById(R.id.theme11_imageButton);
         ImageButton themeButton12 = findViewById(R.id.theme12_imageButton);
 
+        ImageButton themeButton13 = findViewById(R.id.theme13_imageButton);
+        ImageButton themeButton14 = findViewById(R.id.theme14_imageButton);
+        ImageButton themeButton15 = findViewById(R.id.theme15_imageButton);
+        ImageButton themeButton16 = findViewById(R.id.theme16_imageButton);
+        ImageButton themeButton17 = findViewById(R.id.theme17_imageButton);
+        ImageButton themeButton18 = findViewById(R.id.theme18_imageButton);
+        ImageButton themeButton19 = findViewById(R.id.theme19_imageButton);
+        ImageButton themeButton20 = findViewById(R.id.theme20_imageButton);
+        ImageButton themeButton21 = findViewById(R.id.theme21_imageButton);
         themeButton1.setOnClickListener(this);
         themeButton2.setOnClickListener(this);
         themeButton3.setOnClickListener(this);
@@ -49,6 +58,16 @@ public class ThemeActivity extends AppCompatActivity implements View.OnClickList
         themeButton10.setOnClickListener(this);
         themeButton11.setOnClickListener(this);
         themeButton12.setOnClickListener(this);
+
+        themeButton13.setOnClickListener(this);
+        themeButton14.setOnClickListener(this);
+        themeButton15.setOnClickListener(this);
+        themeButton16.setOnClickListener(this);
+        themeButton17.setOnClickListener(this);
+        themeButton18.setOnClickListener(this);
+        themeButton19.setOnClickListener(this);
+        themeButton20.setOnClickListener(this);
+        themeButton21.setOnClickListener(this);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -95,6 +114,34 @@ public class ThemeActivity extends AppCompatActivity implements View.OnClickList
             case R.id.theme12_imageButton:
                 editor.putInt(THEME_KEY, 11).apply();
                 break;
+            case R.id.theme13_imageButton:
+                editor.putInt(THEME_KEY, 12).apply();
+                break;
+            case R.id.theme14_imageButton:
+                editor.putInt(THEME_KEY, 13).apply();
+                break;
+            case R.id.theme15_imageButton:
+                editor.putInt(THEME_KEY, 14).apply();
+                break;
+            case R.id.theme16_imageButton:
+                editor.putInt(THEME_KEY, 15).apply();
+                break;
+            case R.id.theme17_imageButton:
+                editor.putInt(THEME_KEY, 16).apply();
+                break;
+            case R.id.theme18_imageButton:
+                editor.putInt(THEME_KEY, 17).apply();
+                break;
+            case R.id.theme19_imageButton:
+                editor.putInt(THEME_KEY, 18).apply();
+                break;
+            case R.id.theme20_imageButton:
+                editor.putInt(THEME_KEY, 19).apply();
+                break;
+            case R.id.theme21_imageButton:
+                editor.putInt(THEME_KEY, 20).apply();
+                break;
+
             default:
                 break;
         }

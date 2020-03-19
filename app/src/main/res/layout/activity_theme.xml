@@ -17,15 +17,6 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_marginBottom="5dp"
         android:background="@color/white">
-        <TextView
-            android:id="@+id/title_toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-
-            android:text="Themes"
-            android:textSize="16sp"
-            ></TextView>
 
 
     </androidx.appcompat.widget.Toolbar>
@@ -38,6 +29,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" >
 
+
+
+
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
@@ -49,6 +43,7 @@
             ads:layout_constraintEnd_toEndOf="parent"
             ads:layout_constraintStart_toStartOf="parent"
             ads:layout_constraintTop_toTopOf="parent">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -192,9 +187,12 @@
                         app:srcCompat="@drawable/theme9" />
                 </LinearLayout>
 
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
 
@@ -236,6 +234,144 @@
                         android:padding="0dp"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/theme12" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/theme13_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        ads:srcCompat="@drawable/v14" />
+
+                    <ImageButton
+                        android:id="@+id/theme14_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v15" />
+                    <ImageButton
+                        android:id="@+id/theme15_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageButton
+                        android:id="@+id/theme16_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v17" />
+                    <ImageButton
+                        android:id="@+id/theme17_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v18" />
+
+                    <ImageButton
+                        android:id="@+id/theme18_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v19" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/theme19_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v19" />
+
+                    <ImageButton
+                        android:id="@+id/theme20_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v22" />
+                    <ImageButton
+                        android:id="@+id/theme21_imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/v25" />
                 </LinearLayout>
 
 
