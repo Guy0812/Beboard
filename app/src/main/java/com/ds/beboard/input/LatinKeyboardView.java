@@ -83,14 +83,15 @@ public class LatinKeyboardView extends KeyboardView {
         paint.setTextSize(28);
         paint.setColor(getResources().getColor(R.color.white));
 
+
         List<Key> keys = getKeyboard().getKeys();
         for(Key key: keys) {
             if(key.label != null) {
                 if (key.label.equals("◌̀")) {
                     canvas.drawText("1", key.x + (key.width - 10), key.y + 30, paint);
-                } else if (key.label.equals("◌́")) {
+                }else if (key.label.equals("◌́")) {
                     canvas.drawText("2", key.x + (key.width - 10), key.y + 30, paint);
-                } else if (key.label.equals("◌̂")) {
+                } else if (key.label.equals("◌̂" )) {
                     canvas.drawText("3", key.x + (key.width - 10), key.y + 30, paint);
                 } else if (key.label.equals("◌̌")) {
                     canvas.drawText("4", key.x + (key.width - 10), key.y + 30, paint);

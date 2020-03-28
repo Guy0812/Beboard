@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:background="@drawable/theme1"
-    android:keyTextColor="@color/candidate_normal"
-    android:keyBackground="@color/grey"
+    android:background="@drawable/col1"
+    android:keyTextColor="@color/white"
+    android:keyBackground="@color/transp"
     android:keyPreviewLayout="@layout/key_preview"
     android:popupLayout="@layout/keyboard_popup_layout"/>

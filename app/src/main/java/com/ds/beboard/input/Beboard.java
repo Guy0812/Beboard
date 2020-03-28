@@ -83,7 +83,7 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
             R.layout.keyboardview4, R.layout.keyboardview5, R.layout.keyboardview6, R.layout.keyboardview7,
             R.layout.keyboardview8, R.layout.keyboardview9, R.layout.keyboardview10, R.layout.keyboardview11, R.layout.keyboardview12
             , R.layout.keyboardview13, R.layout.keyboardview14, R.layout.keyboardview15, R.layout.keyboardview16, R.layout.keyboardview17
-            , R.layout.keyboardview18, R.layout.keyboardview19, R.layout.keyboardview20, R.layout.keyboardview21};
+            , R.layout.keyboardview18, R.layout.keyboardview19, R.layout.keyboardview20, R.layout.keyboardview21 };
 
     /**
      * Initialisation principale du composant de méthode d'entrée. Assurez-vous d'appeler
@@ -316,7 +316,7 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
     }
 
 
-
+Context context;
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
         Log.d("Test","KEYCODE: " + primaryCode);
@@ -356,10 +356,12 @@ public class Beboard extends InputMethodService implements KeyboardView.OnKeyboa
                 setLatinKeyboard(mSymbolsKeyboard);
                 mSymbolsKeyboard.setShifted(false);
             }
+
         } else if (primaryCode == -10000) {
-            // Show Emoticons
-            startActivity(new Intent(Beboard.this, SettingActivity.class));
-            //showEmoticons();
+           // startActivity(new Intent(Beboard.this,SettingActivity.class));
+            Intent intent = new Intent(this, SettingActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            this.startActivity(intent);
         } else if (primaryCode == -10001) {
             // Zero Space
             mComposing.append("\u200C");

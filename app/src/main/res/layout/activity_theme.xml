@@ -18,7 +18,14 @@
         android:layout_marginBottom="5dp"
         android:background="@color/white">
 
-
+        <TextView
+            android:id="@+id/titlecolor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/Themes"
+            android:textSize="16sp"
+            ></TextView>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,10 +52,21 @@
             ads:layout_constraintTop_toTopOf="parent">
 
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Color"
+                    android:textSize="18sp"
+                    android:textColor="@color/bleu"
+                    android:layout_marginBottom="10dp"/>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -66,7 +84,7 @@
                         android:adjustViewBounds="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        ads:srcCompat="@drawable/theme1" />
+                        ads:srcCompat="@drawable/col1" />
 
                     <ImageButton
                         android:id="@+id/theme2_imageButton"
@@ -172,7 +190,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/theme8" />
+                        app:srcCompat="@drawable/col3" />
                     <ImageButton
                         android:id="@+id/theme9_imageButton"
                         android:layout_width="wrap_content"
@@ -184,7 +202,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/theme9" />
+                        app:srcCompat="@drawable/col4" />
                 </LinearLayout>
 
 
@@ -220,7 +238,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/theme11" />
+                        app:srcCompat="@drawable/col5" />
 
                     <ImageButton
                         android:id="@+id/theme12_imageButton"
@@ -236,6 +254,15 @@
                         app:srcCompat="@drawable/theme12" />
                 </LinearLayout>
 
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Image"
+                    android:textSize="18sp"
+                    android:textColor="@color/bleu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -253,7 +280,7 @@
                         android:adjustViewBounds="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        ads:srcCompat="@drawable/v14" />
+                        ads:srcCompat="@drawable/av" />
 
                     <ImageButton
                         android:id="@+id/theme14_imageButton"
@@ -266,7 +293,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v15" />
+                        app:srcCompat="@drawable/a2v" />
                     <ImageButton
                         android:id="@+id/theme15_imageButton"
                         android:layout_width="wrap_content"
@@ -278,7 +305,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v16" />
+                        app:srcCompat="@drawable/a13v" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -299,7 +326,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v17" />
+                        app:srcCompat="@drawable/a5v" />
                     <ImageButton
                         android:id="@+id/theme17_imageButton"
                         android:layout_width="wrap_content"
@@ -311,7 +338,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v18" />
+                        app:srcCompat="@drawable/a7v" />
 
                     <ImageButton
                         android:id="@+id/theme18_imageButton"
@@ -324,7 +351,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v19" />
+                        app:srcCompat="@drawable/a8v" />
                 </LinearLayout>
 
 
@@ -346,7 +373,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v19" />
+                        app:srcCompat="@drawable/a9v" />
 
                     <ImageButton
                         android:id="@+id/theme20_imageButton"
@@ -359,7 +386,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v22" />
+                        app:srcCompat="@drawable/a10v" />
                     <ImageButton
                         android:id="@+id/theme21_imageButton"
                         android:layout_width="wrap_content"
@@ -371,7 +398,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/v25" />
+                        app:srcCompat="@drawable/a12v"/>
                 </LinearLayout>
 
 

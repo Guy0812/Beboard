@@ -1,6 +1,7 @@
 package com.ds.beboard;
 
 import android.annotation.SuppressLint;
+import android.app.AppComponentFactory;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.List;
 
@@ -21,17 +24,24 @@ import static android.widget.Toast.LENGTH_LONG;
 import static com.ds.beboard.R.string.elseinputtext;
 
 
-public class SettingActivity extends PreferenceActivity {
+public class SettingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         getFragmentManager().beginTransaction().replace(android.R.id.content,new MainSettingFragment()).commit();
+
+        //   MainSettingFragment mainSettingFragment = new MainSettingFragment();
+
+        //   FragmentTransaction transaction = getSupportFragmentManager().beginTransaction().add(R.id.content,mainSettingFragment, null);
+        //  transaction.commit();
 
     }
 
     @SuppressLint("ValidFragment")
-    public class MainSettingFragment extends PreferenceFragment{
+    public static class MainSettingFragment extends PreferenceFragment{
 
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,16 +62,16 @@ public class SettingActivity extends PreferenceActivity {
             pinput.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    if (isInputEnabled()) {
-                        ((InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE)).showInputMethodPicker();
+                    if (isInputEnabled(getActivity().getApplication())) {
+                        ((InputMethodManager) getActivity().getApplication() .getSystemService(Context.INPUT_METHOD_SERVICE)).showInputMethodPicker();
                     } else {
-                        Toast.makeText(getApplicationContext(), getString(elseinputtext), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity().getApplication() , getString(elseinputtext), Toast.LENGTH_SHORT).show();
                     }
                     return false;
                 }
 
-                private boolean isInputEnabled() {
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                private boolean isInputEnabled(Context context) {
+                    InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
                     List<InputMethodInfo> mInputMethodProperties = imm.getEnabledInputMethodList();
 
                     final int N = mInputMethodProperties.size();
@@ -71,7 +81,7 @@ public class SettingActivity extends PreferenceActivity {
 
                         InputMethodInfo imi = mInputMethodProperties.get(i);
                         Log.d("INPUT ID", String.valueOf(imi.getId()));
-                        if (imi.getId().contains(getPackageName())) {
+                        if (imi.getId().contains(getActivity().getPackageName())) {
                             isInputEnabled = true;
                         }
                     }
@@ -85,11 +95,11 @@ public class SettingActivity extends PreferenceActivity {
 
             });
 
-            Preference ptheme = (Preference) findPreference("ptheme");
+           Preference ptheme = (Preference) findPreference("ptheme");
             ptheme.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    startActivity(new Intent(SettingActivity.this,ThemeActivity.class));
+                  startActivity(new Intent(getActivity().getApplication(),ThemeActivity.class));
                     return false;
                 }
 
@@ -99,12 +109,11 @@ public class SettingActivity extends PreferenceActivity {
             pabout.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    startActivity(new Intent(SettingActivity.this,AboutActivity.class));
+                    startActivity(new Intent(getActivity().getApplication(),AboutActivity.class));
                     return false;
                 }
 
             });
-
 
 
         }

@@ -22,4 +22,11 @@
 
     <string name="about_info">Beboard is a complete solution for both Fongbé  Benin national language along with native numbers and symbols.\n\n The application is developed based on alphabet Fongbé, therefore we highly recommend to post your reviews to help us serve you best.\n\nSend us an email at beninkeyboard@gmail.com, if you have any concerns.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mainSettingFragment">MainSettingFragment</string>
+    <string name="Themes">Themes</string>
+    <string name="Color">Color</string>
+    <string name="Image">Image</string>
+
 </resources>
