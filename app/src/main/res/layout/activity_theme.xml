@@ -84,7 +84,7 @@
                         android:adjustViewBounds="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        ads:srcCompat="@drawable/col1" />
+                        ads:srcCompat="@drawable/theme2" />
 
                     <ImageButton
                         android:id="@+id/theme2_imageButton"
@@ -97,7 +97,7 @@
                         android:cropToPadding="true"
                         android:padding="0dp"
                         android:scaleType="fitXY"
-                        app:srcCompat="@drawable/theme2" />
+                        app:srcCompat="@drawable/col1" />
                     <ImageButton
                         android:id="@+id/theme3_imageButton"
                         android:layout_width="wrap_content"
